@@ -1,0 +1,28 @@
+@mixin button--color($color, $background-color) {
+  color: $color;
+  background: $background-color;
+
+  &:hover {
+    background: darken($background-color, 5%);
+    transition: background 0.15s linear;
+  }
+}
+
+.button {
+  padding: 0.875em 2.15em 0.875em 2.15em;
+  font: 1.125em/1.5 tahoma, arial, "Hiragino Sans GB", \5fae\8f6f\96c5\9ed1,
+    sans-serif;
+  border-style: none;
+  border-radius: 50px;
+  font-weight: 550;
+  width: auto;
+  cursor: pointer;
+  transition: background 0.15s linear;
+}
+
+.button--color-orange {
+  @include button--color(white, $orange);
+}
+.button--color-white {
+  @include button--color($orange, white);
+}
