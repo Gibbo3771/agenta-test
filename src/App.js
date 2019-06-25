@@ -8,7 +8,8 @@ function App() {
     <div>
       <Button
         color="orange"
-        callback={() => console.log("yay")}
+        name="test-button"
+        onClick={() => console.log("yay")}
         text="Schedule Meeting"
       />
     </div>

@@ -1,16 +1,26 @@
 // @flow
-import React from "react";
+import * as React from "react";
 
 export type Props = {
+  disabled?: boolean,
+  autofocus?: boolean,
+  name: string,
   text: string,
   color: string,
-  callback: () => void
+  onClick: (evt: SyntheticEvent<HTMLButtonElement>) => void
 };
 
 const Button = (props: Props) => {
-  const { color, callback, text } = props;
+  const { disabled, autofocus, name, text, color, onClick } = props;
   return (
-    <button className={`button button--color-${color}`} onClick={callback}>
+    <button
+      type="button"
+      className={`button button--color-${color}`}
+      disabled={disabled}
+      autoFocus={autofocus}
+      name={name}
+      onClick={(evt: SyntheticEvent<HTMLButtonElement>) => onClick(evt)}
+    >
       {text}
     </button>
   );
