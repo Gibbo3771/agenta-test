@@ -251,11 +251,6 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #8998b7;
 }
-input[type="text"],
-textarea {
-  outline: 0;
-  padding: 3px;
-}
 .more:after {
   transition: all 0.2s ease-in-out;
   content: "";

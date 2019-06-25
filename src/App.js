@@ -2,16 +2,14 @@
 
 import React from "react";
 import Button from "./components/Button/Button";
+import InputDefault from "./components/Input/InputDefault";
+import InputLabel from "./components/Input/InputLabel";
 
 function App() {
   return (
     <div>
-      <Button
-        color="orange"
-        name="test-button"
-        onClick={() => console.log("yay")}
-        text="Schedule Meeting"
-      />
+      <InputLabel htmlFor="test-input" text="Test" />
+      <InputDefault id="test-input" type="text" />
     </div>
   );
 }
