@@ -11,7 +11,7 @@ export type Props = {
   required?: boolean,
   size?: number,
   options: Array<string>,
-  onChange: (evt: SyntheticEvent<HTMLSelectElement>) => void
+  onChange?: (evt: SyntheticEvent<HTMLSelectElement>) => void
 };
 
 const InputSelect = (props: Props) => {
@@ -37,7 +37,15 @@ const InputSelect = (props: Props) => {
       multiple={multiple}
       required={required}
       size={size}
-      onChange={(evt: SyntheticEvent<HTMLSelectElement>) => onChange(evt)}
-    />
+      onChange={(evt: SyntheticEvent<HTMLSelectElement>) =>
+        onChange ? onChange(evt) : null
+      }
+    >
+      {options.map(value => (
+        <option key={`${value}`}>{value}</option>
+      ))}
+    </select>
   );
 };
+
+export default InputSelect;

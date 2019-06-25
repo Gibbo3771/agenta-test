@@ -7,15 +7,16 @@ export type Props = {
   name: string,
   text: string,
   color: string,
-  onClick: (evt: SyntheticEvent<HTMLButtonElement>) => void
+  onClick: (evt: SyntheticEvent<HTMLButtonElement>) => void,
+  styles?: string
 };
 
 const Button = (props: Props) => {
-  const { disabled, autofocus, name, text, color, onClick } = props;
+  const { disabled, autofocus, name, text, color, onClick, styles } = props;
   return (
     <button
       type="button"
-      className={`button button--color-${color}`}
+      className={`button button--color-${color} ${styles ? styles : ""}`}
       disabled={disabled}
       autoFocus={autofocus}
       name={name}

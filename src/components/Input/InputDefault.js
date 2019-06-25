@@ -17,7 +17,8 @@ export type Props = {
   maxLength?: number,
   min?: number,
   max?: number,
-  label?: string
+  label?: string,
+  styles?: string
 };
 
 const InputDefault = (props: Props) => {
@@ -34,13 +35,14 @@ const InputDefault = (props: Props) => {
     maxLength,
     min,
     max,
-    label
+    label,
+    styles
   } = props;
   if (!REQUIRES_DEFAULT.includes(type))
     throw new Error(`Input (id: ${id}) has an invalid type`);
   return (
     <input
-      className="input-default"
+      className={`input-default ${styles ? styles : ""}`}
       id={id}
       type={type}
       name={name}

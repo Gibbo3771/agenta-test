@@ -1,6 +1,7 @@
 /* SASS imports start */
 
 @import "./colors.scss";
+@import "./borders.scss";
 @import "../components/index.scss";
 
 /* SASS imports end */
@@ -271,4 +272,8 @@ a:hover {
 }
 .active.more:after {
   transform: rotate(135deg);
+}
+
+html {
+  background: $dark-blue;
 }
