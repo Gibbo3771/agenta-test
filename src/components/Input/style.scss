@@ -1,4 +1,5 @@
 .input-default {
+  @include shadow($inset: true);
   border-style: none;
   background: $grey;
   border-radius: 6px;
@@ -7,6 +8,6 @@
   min-width: 80%;
   height: 3em;
   margin: 2em;
-  box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.068);
+  //   box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.07);
   padding: 0 25px 0 25px;
 }

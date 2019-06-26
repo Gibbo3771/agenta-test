@@ -3,8 +3,11 @@
   background: $background-color;
 
   &:hover {
+    background: lighten($background-color, 5%);
+  }
+
+  &:active {
     background: darken($background-color, 5%);
-    transition: background 0.15s linear;
   }
 }
 
@@ -18,7 +21,6 @@
   width: auto;
   outline: 0;
   cursor: pointer;
-  transition: background 0.15s linear;
 }
 
 .button--color-orange {
