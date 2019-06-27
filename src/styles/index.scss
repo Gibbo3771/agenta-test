@@ -1,7 +1,6 @@
 /* SASS imports start */
 
 @import "./colors.scss";
-@import "./borders.scss";
 @import "./shadows.scss";
 @import "../components/index.scss";
 
@@ -276,5 +275,5 @@ a:hover {
 }
 
 html {
-  // background: $dark-blue;
+  background: #efeeee;
 }

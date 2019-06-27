@@ -5,11 +5,14 @@ import Button from "./components/Button/Button";
 import InputDefault from "./components/Input/InputDefault";
 import InputLabel from "./components/Input/InputLabel";
 import InputSelect from "./components/Input/InputSelect";
-import Card from "./components/Card/Card";
+import Paper from "./components/Paper/Paper";
+import Meeting from "./components/Meeting/Meeting";
+import NavigationBar from "./components/NavigationBar/NavigationBar";
 
 function App() {
   return (
     <div>
+      <NavigationBar />
       <InputDefault id="test-input" name="test-input" type="text" />
       <Button
         name="test-button-orange"
@@ -28,7 +31,8 @@ function App() {
         name="test-select"
         options={["Option A", "Option B"]}
       />
-      <Card>Look at me!</Card>
+      <Paper />
+      <Meeting />
     </div>
   );
 }

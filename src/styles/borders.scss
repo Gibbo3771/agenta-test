@@ -1,8 +1,0 @@
-// Divisable by 2 border radius classes
-@for $i from 0 through 20 {
-  @if $i % 2 == 0 {
-    .border-radius--#{$i}px {
-      border-radius: #{$i}px !important;
-    }
-  }
-}

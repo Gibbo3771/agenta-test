@@ -1,0 +1,7 @@
+.paper {
+  @include shadow($inset: false);
+  background: white;
+  border-radius: 8px;
+  min-height: 4em;
+  margin-top: 20px;
+}
