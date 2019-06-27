@@ -1,14 +1,9 @@
 .navbar {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-end: 0;
-  grid-auto-rows: minmax(min-content, max-content);
+  //   display: grid;
+  //   grid-template-columns: repeat(12, 1fr);
+  //   grid-column-end: 0;
+  //   grid-auto-rows: minmax(min-content, max-content);
   height: 100px;
   width: 100%;
   background: $dark-blue;
-
-  * {
-    align-self: center;
-    justify-self: center;
-  }
 }

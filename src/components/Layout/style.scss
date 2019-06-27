@@ -2,3 +2,42 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+
+.gutters {
+  grid-gap: 5px;
+  padding: 0px 5px 0px 5px;
+}
+
+@for $i from 1 through 12 {
+  .col-start--#{$i} {
+    grid-column-start: $i;
+  }
+
+  .col-span--#{$i} {
+    grid-column-end: $i;
+  }
+}
+
+.align--center {
+  align-self: center;
+}
+
+.align--top {
+  align-self: flex-start;
+}
+
+.align--bottom {
+  align-self: flex-end;
+}
+
+.justify--center {
+  justify-self: center;
+}
+
+.justify--left {
+  justify-self: left;
+}
+
+.justify--right {
+  justify-self: right;
+}
