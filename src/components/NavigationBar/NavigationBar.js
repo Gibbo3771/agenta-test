@@ -3,23 +3,28 @@
 import React from "react";
 import InputDefault from "../Input/InputDefault";
 import Button from "../Button/Button";
-import Grid from "../Layout/Grid";
-import GridItem from "../Layout/GridItem";
+import Grid from "../Layout/Grid/Grid";
+import GridItem from "../Layout/Grid/GridItem";
 
 const NavigationBar = () => {
   return (
     <div className="navbar">
-      <Grid gutters>
-        <GridItem col="1" span="8">
-          <InputDefault id="test-input" name="test-input" type="text" />
+      <Grid>
+        <GridItem colStart="1" colEnd="8">
+          <InputDefault
+            id="test-input"
+            name="test-input"
+            type="text"
+            placeholder="Search"
+          />
         </GridItem>
-        <GridItem col="9" alignCenter justifyCenter>
-          <p>Profile</p>
+        <GridItem colStart="9" alignCenter justifyRight>
+          <p className="fake-link">Profile</p>
         </GridItem>
-        <GridItem col="10" alignCenter justifyCenter>
-          <p>Admin</p>
+        <GridItem colStart="10" alignCenter justifyCenter>
+          <p className="fake-link">Admin</p>
         </GridItem>
-        <GridItem col="11" alignCenter justifyCenter>
+        <GridItem colStart="11" alignCenter justifyCenter>
           <Button
             name="test-button-white"
             color="white"

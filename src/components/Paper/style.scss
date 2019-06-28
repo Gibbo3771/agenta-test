@@ -2,6 +2,18 @@
   @include shadow($inset: false);
   background: white;
   border-radius: 8px;
+  width: 100%;
   min-height: 4em;
-  margin-top: 20px;
+}
+
+.paper--m {
+  width: 80%;
+}
+
+.paper--l {
+  width: 90%;
+}
+
+.paper--xl {
+  width: 100%;
 }

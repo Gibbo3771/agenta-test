@@ -1,7 +1,6 @@
 .meeting {
   display: grid;
   height: 4em;
-
   grid-template-columns: 0.25fr repeat(4, 1fr);
   justify-items: center;
   align-content: center;

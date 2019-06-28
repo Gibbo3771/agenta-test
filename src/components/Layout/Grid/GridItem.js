@@ -3,35 +3,38 @@ import React from "react";
 
 export type Props = {
   children?: any,
-  col?: string,
-  span?: string,
+  colStart?: string,
+  colEnd?: string,
   alignTop?: boolean,
   alignBottom?: boolean,
   alignCenter?: boolean,
   justifyLeft?: boolean,
   justifyRight?: boolean,
-  justifyCenter?: boolean
+  justifyCenter?: boolean,
+  customStyling?: string
 };
 
 const GridItem = (props: Props) => {
   const mapClasses = () => {
     const {
-      col,
-      span,
+      colStart,
+      colEnd,
       alignTop,
       alignBottom,
       alignCenter,
       justifyLeft,
       justifyRight,
-      justifyCenter
+      justifyCenter,
+      customStyling
     } = props;
     const classes = [];
-    if (col) classes.push(`col-start--${col}`);
-    if (span) classes.push(`col-span--${span}`);
+    if (colStart) classes.push(`col-start--${colStart}`);
+    if (colEnd) classes.push(`col-end--${colEnd}`);
 
     const keys = Object.keys(props);
     for (let key of keys) {
-      if (key === "col" || key === "span" || key === "children") continue;
+      if (key === "colStart" || key === "colEnd" || key === "children")
+        continue;
       for (let c = 0; c < key.length; c++) {
         let character = key[c];
         if (character == character.toUpperCase()) {

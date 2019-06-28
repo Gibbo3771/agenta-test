@@ -1,11 +1,10 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(11, 1fr);
 }
 
 .gutters {
   grid-gap: 5px;
-  padding: 0px 5px 0px 5px;
 }
 
 @for $i from 1 through 12 {
@@ -13,7 +12,7 @@
     grid-column-start: $i;
   }
 
-  .col-span--#{$i} {
+  .col-end--#{$i} {
     grid-column-end: $i;
   }
 }
@@ -40,4 +39,7 @@
 
 .justify--right {
   justify-self: right;
+}
+.grid--small {
+  width: 80%;
 }
