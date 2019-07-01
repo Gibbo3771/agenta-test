@@ -14,3 +14,5 @@ const Flex = (props: Props) => {
     </div>
   );
 };
+
+export default Flex;

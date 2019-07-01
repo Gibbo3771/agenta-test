@@ -1,5 +1,6 @@
 // @flow
 import React from "react";
+import { mapClasses } from "../../Util/ClassMapper";
 
 export type Props = {
   children?: any,
@@ -27,6 +28,10 @@ const GridItem = (props: Props) => {
       justifyCenter,
       customStyling
     } = props;
+    const classes = {
+      [colStart ? `col-start--${colStart}` : ""]: colStart ? true : false,
+      [colEnd ? `col-end--${colEnd}` : ""]: colEnd ? true : false
+    };
     const classes = [];
     if (colStart) classes.push(`col-start--${colStart}`);
     if (colEnd) classes.push(`col-end--${colEnd}`);
