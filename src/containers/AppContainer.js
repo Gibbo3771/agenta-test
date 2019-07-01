@@ -8,6 +8,7 @@ import axios from "axios";
 import AllMeetings from "../components/Pages/AllMeetings";
 import NavigationBar from "../components//NavigationBar/NavigationBar";
 import Meeting from "../components/Meeting/Meeting";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 export type Props = {};
 
@@ -47,6 +48,8 @@ export default class extends Component<Props, State> {
   render() {
     return (
       <>
+        <Sidebar />
+
         <NavigationBar />
         <Route
           exact

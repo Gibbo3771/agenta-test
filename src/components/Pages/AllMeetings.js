@@ -36,7 +36,7 @@ class AllMeetings extends React.Component<Props> {
             <div>DATE</div>
           </GridItem>
           <GridItem colStart="8" colEnd="10" justifyLeft>
-            <div>TIME</div>
+            <div>START</div>
           </GridItem>
           <GridItem colStart="1" colEnd="12">
             {this.props.meetings.map(meeting => (

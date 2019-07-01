@@ -10,7 +10,7 @@ const NavigationBar = () => {
   return (
     <div className="navbar">
       <Grid>
-        <GridItem colStart="1" colEnd="8">
+        <GridItem colStart="2" colEnd="8">
           <InputDefault
             id="test-input"
             name="test-input"
@@ -18,13 +18,13 @@ const NavigationBar = () => {
             placeholder="Search"
           />
         </GridItem>
-        <GridItem colStart="9" alignCenter justifyRight>
+        <GridItem colStart="8" alignCenter justifyRight>
           <p className="fake-link">Profile</p>
         </GridItem>
-        <GridItem colStart="10" alignCenter justifyCenter>
+        <GridItem colStart="9" alignCenter justifyCenter>
           <p className="fake-link">Admin</p>
         </GridItem>
-        <GridItem colStart="11" alignCenter justifyCenter>
+        <GridItem colStart="10" alignCenter justifyCenter>
           <Button
             name="test-button-white"
             color="white"
