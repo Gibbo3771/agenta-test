@@ -16,43 +16,31 @@ export type Props = {
 };
 
 const GridItem = (props: Props) => {
-  const mapClasses = () => {
-    const {
-      colStart,
-      colEnd,
-      alignTop,
-      alignBottom,
-      alignCenter,
-      justifyLeft,
-      justifyRight,
-      justifyCenter,
-      customStyling
-    } = props;
-    const classes = {
-      [colStart ? `col-start--${colStart}` : ""]: colStart ? true : false,
-      [colEnd ? `col-end--${colEnd}` : ""]: colEnd ? true : false
-    };
-    const classes = [];
-    if (colStart) classes.push(`col-start--${colStart}`);
-    if (colEnd) classes.push(`col-end--${colEnd}`);
-
-    const keys = Object.keys(props);
-    for (let key of keys) {
-      if (key === "colStart" || key === "colEnd" || key === "children")
-        continue;
-      for (let c = 0; c < key.length; c++) {
-        let character = key[c];
-        if (character == character.toUpperCase()) {
-          classes.push(
-            `${[key.slice(0, c), "--", key.slice(c)].join("").toLowerCase()}`
-          );
-        }
-      }
-    }
-    return classes.join(" ");
+  const {
+    colStart,
+    colEnd,
+    alignTop,
+    alignBottom,
+    alignCenter,
+    justifyLeft,
+    justifyRight,
+    justifyCenter,
+    customStyling
+  } = props;
+  const classes = {
+    grid__item: true,
+    [colStart ? `col-start--${colStart}` : ""]: colStart ? true : false,
+    [colEnd ? `col-end--${colEnd}` : ""]: colEnd ? true : false,
+    [customStyling ? `${customStyling}` : ""]: customStyling ? true : false,
+    "grid-align--center": alignCenter,
+    "grid-align--top": alignTop,
+    "grid-align--bottom": alignBottom,
+    "grid-justify--center": justifyCenter,
+    "grid-justify--right": justifyRight,
+    "grid-justify--left": justifyLeft
   };
 
-  return <section className={mapClasses()}>{props.children}</section>;
+  return <section className={mapClasses(classes)}>{props.children}</section>;
 };
 
 export default GridItem;

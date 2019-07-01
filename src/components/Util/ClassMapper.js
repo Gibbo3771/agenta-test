@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 
 export type MappableClasses = {
-  [key: string]: boolean
+  [key: string]: boolean | void
 };
 
 const mapClasses = (mappableClasses: MappableClasses) => {

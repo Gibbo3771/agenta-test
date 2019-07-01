@@ -1,6 +1,11 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.grid__item {
+  height: 100%;
 }
 
 .gutters {
@@ -17,27 +22,27 @@
   }
 }
 
-.align--center {
+.grid-align--center {
   align-self: center;
 }
 
-.align--top {
+.grid-align--top {
   align-self: flex-start;
 }
 
-.align--bottom {
+.grid-align--bottom {
   align-self: flex-end;
 }
 
-.justify--center {
+.grid-justify--center {
   justify-self: center;
 }
 
-.justify--left {
+.grid-justify--left {
   justify-self: left;
 }
 
-.justify--right {
+.grid-justify--right {
   justify-self: right;
 }
 .grid--small {

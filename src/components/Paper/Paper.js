@@ -2,12 +2,20 @@
 
 import React from "react";
 
+import { mapClasses } from "../Util/ClassMapper";
+
 export type Props = {
-  children?: any
+  children?: any,
+  customStyling?: string
 };
 
 const Paper = (props: Props) => {
-  return <div className="paper">{props.children}</div>;
+  const { children, customStyling } = props;
+  const classes = {
+    paper: true,
+    [customStyling ? `${customStyling}` : ""]: customStyling ? true : false
+  };
+  return <div className={mapClasses(classes)}>{children}</div>;
 };
 
 export default Paper;

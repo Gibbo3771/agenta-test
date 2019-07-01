@@ -5,9 +5,16 @@ import Paper from "../Paper/Paper";
 import Grid from "../Layout/Grid/Grid";
 import GridItem from "../Layout/Grid/GridItem";
 
+type Owner = {
+  id: number,
+  first_name: string,
+  last_name: string,
+  email: string
+};
+
 export type Props = {
-  callID: string,
-  owner: string,
+  callid: string,
+  owner: Owner,
   name: string,
   datetime: Date
 };
@@ -41,21 +48,21 @@ const parseTime = (date: Date) => {
 
 const Meeting = (props: Props) => {
   return (
-    <Paper>
+    <Paper customStyling="meeting--margin-top--1em">
       <Grid gutters>
-        <GridItem colStart="1" justifyCenter>
-          <p className="call-id">{props.callID}</p>
+        <GridItem colStart="1" justifyCenter alignCenter>
+          <p className="call-id">{props.callid}</p>
         </GridItem>
-        <GridItem colStart="2" colEnd="4" justifyLeft>
-          <div>{props.owner}</div>
+        <GridItem colStart="2" colEnd="4" justifyLeft alignCenter>
+          <div>{`${props.owner.first_name} ${props.owner.last_name}`}</div>
         </GridItem>
-        <GridItem colStart="4" colEnd="6" justifyLeft>
+        <GridItem colStart="4" colEnd="6" justifyLeft alignCenter>
           <div>{props.name}</div>
         </GridItem>
-        <GridItem colStart="6" colEnd="8" justifyLeft>
+        <GridItem colStart="6" colEnd="8" justifyLeft alignCenter>
           {parseDate(props.datetime)}
         </GridItem>
-        <GridItem colStart="8" colEnd="10" justifyLeft>
+        <GridItem colStart="8" colEnd="10" justifyLeft alignCenter>
           {parseTime(props.datetime)}
         </GridItem>
       </Grid>

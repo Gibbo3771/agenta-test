@@ -4,13 +4,12 @@
   grid-template-columns: 0.25fr repeat(4, 1fr);
   justify-items: center;
   align-content: center;
-
-  div {
-    align-self: center;
-    justify-self: center;
-  }
 }
 
 .call-id {
   color: $orange;
+}
+
+.meeting--margin-top--1em {
+  margin-top: 1em;
 }

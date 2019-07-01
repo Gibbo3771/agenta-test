@@ -1,6 +1,7 @@
 // @flow
 
 import React from "react";
+import { mapClasses } from "../../Util/ClassMapper";
 
 export type Props = {
   children?: any,
@@ -9,17 +10,13 @@ export type Props = {
 };
 
 const Grid = (props: Props) => {
-  return (
-    <div
-      className={
-        "grid " +
-        (props.gutters ? "gutters " : "") +
-        (props.customStyling ? props.customStyling : "")
-      }
-    >
-      {props.children}
-    </div>
-  );
+  const { gutters, customStyling } = props;
+  const classes = {
+    grid: true,
+    gutters: gutters,
+    [customStyling ? `${customStyling}` : ""]: customStyling ? true : false
+  };
+  return <div className={mapClasses(classes)}>{props.children}</div>;
 };
 
 export default Grid;
